@@ -1,7 +1,7 @@
 {% set name = "dtool" %}
 {% set author = "jic-dtool" %}
-{% set version = "3.14.1" %}
-{% set sha256 = "4b41967e6edd3a724b3fc96a3ff121b2b004263a03434147a9ac4ac6ae6fba01" %}
+{% set version = "3.15.0" %}
+{% set sha256 = "98e5c91addf30cd51811b9404137cef49b6a370a25f218617282507d3b4c45dc" %}
 
 package:
   name: {{ name|lower }}
