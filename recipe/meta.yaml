@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -22,20 +22,23 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - dtoolcore  # ==3.12.0
-    - dtool_cli
-    - dtool_create  # ==0.22.0
-    - dtool_info  # ==0.15.0
-    - dtool_symlink
-    - dtool_http  # ==0.3.0
-    - dtool_config
+    - dtoolcore ==3.17.0
+    - dtool_cli ==0.7.0
+    - dtool_create ==0.23.0
+    - dtool_info ==0.16.1
+    - dtool_symlink ==0.3.0
+    - dtool_http ==0.5.0
+    - dtool_config ==0.4.0
+    - dtool_overlay ==0.3.0
+    - dtool_annotation ==0.1.0
+    - dtool_tag ==0.1.0
 
 test:
   commands:
     - dtool --help
-    # - pip check  # Currently the specific versions are not yet available
+    - pip check
   requires:
-    # - pip
+    - pip
 
 about:
   home: http://github.com/{{ author }}/{{ name }}
