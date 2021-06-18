@@ -22,12 +22,12 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - dtoolcore
+    - dtoolcore ==3.12.0
     - dtool_cli
-    - dtool_create
-    - dtool_info
+    - dtool_create ==0.22.0
+    - dtool_info ==0.15.0
     - dtool_symlink
-    - dtool_http
+    - dtool_http ==0.3.0
     - dtool_config
 
 test:
