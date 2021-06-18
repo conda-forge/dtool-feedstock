@@ -33,7 +33,7 @@ requirements:
 test:
   commands:
     - dtool --help
-    # - pip check
+    # - pip check  # Currently the specific versions are not yet available
   requires:
     # - pip
 
