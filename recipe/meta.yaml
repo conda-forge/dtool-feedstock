@@ -22,20 +22,20 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - dtoolcore ==3.12.0
+    - dtoolcore  # ==3.12.0
     - dtool_cli
-    - dtool_create ==0.22.0
-    - dtool_info ==0.15.0
+    - dtool_create  # ==0.22.0
+    - dtool_info  # ==0.15.0
     - dtool_symlink
-    - dtool_http ==0.3.0
+    - dtool_http  # ==0.3.0
     - dtool_config
 
 test:
   commands:
     - dtool --help
-    - pip check
+    # - pip check
   requires:
-    - pip
+    # - pip
 
 about:
   home: http://github.com/{{ author }}/{{ name }}
