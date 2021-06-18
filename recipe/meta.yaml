@@ -1,7 +1,7 @@
 {% set name = "dtool" %}
 {% set author = "jic-dtool" %}
-{% set version = "3.18.0" %}
-{% set sha256 = "755c812e40084efdf50a909b8c1959e72e709aada2def8be8abe5f7e29d1f477" %}
+{% set version = "3.25.0" %}
+{% set sha256 = "178e5e119224bd74eddd5246c90debab8fcf0792ec1e9feac35386ddfd226fe8" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -41,9 +41,9 @@ about:
   home: http://github.com/{{ author }}/{{ name }}
   license: MIT
   license_file: LICENSE.rst
-  summary: 'Dtool is a suite of software for managing scientific data and making it accessible programatically.'
+  summary: Dtool is a suite of software for managing scientific data and making it accessible programatically.
 
-  description: | 
+  description: |
     The dtool command line interface allows one to organise files into datasets and to move datasets between 
     different storage solutions, for example from local disk to remote object storage. Importantly it also 
     provides methods to verify that the transfer has been successful.
