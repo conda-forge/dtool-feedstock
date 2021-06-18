@@ -36,7 +36,7 @@ requirements:
 test:
   commands:
     - dtool --help
-    - pip check  # Currently the specific versions are not yet available
+    - pip check
   requires:
     - pip
 
