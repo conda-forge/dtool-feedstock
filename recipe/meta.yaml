@@ -1,5 +1,5 @@
 {% set name = "dtool" %}
-{% set version = "3.25.0" %}
+{% set version = "3.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "0a9f137705b16e343e323e76506101277fc0e11fe2e88352d6ce406e734cfab0"
+  sha256: 7c1073b8463f639107efecc0c4d206930f5b4aafc83d56ee449dd23cefc5703b
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
