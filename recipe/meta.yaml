@@ -1,18 +1,16 @@
 {% set name = "dtool" %}
-{% set author = "jic-dtool" %}
 {% set version = "3.25.0" %}
-{% set sha256 = "178e5e119224bd74eddd5246c90debab8fcf0792ec1e9feac35386ddfd226fe8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ author }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: "0a9f137705b16e343e323e76506101277fc0e11fe2e88352d6ce406e734cfab0"
 
 build:
-  number: 2
+  number: 3
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -41,7 +39,7 @@ test:
     - pip
 
 about:
-  home: http://github.com/{{ author }}/{{ name }}
+  home: https://github.com/jic-dtool/dtool
   license: MIT
   license_file: LICENSE.rst
   summary: Dtool is a suite of software for managing scientific data and making it accessible programatically.
@@ -55,7 +53,7 @@ about:
     scripts for processing the items, or a subset of items, in a dataset. The Python API also allows
     datasets to be constructed programatically.
   doc_url: https://dtool.readthedocs.io/en/latest/
-  dev_url: https://github.com/{{ author }}/{{ name }}
+  dev_url: https://github.com/jic-dtool/dtool
 
 extra:
   recipe-maintainers:

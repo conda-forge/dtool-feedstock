@@ -1,7 +1,7 @@
 About dtool
 ===========
 
-Home: http://github.com/jic-dtool/dtool
+Home: https://github.com/jic-dtool/dtool
 
 Package license: MIT
 
