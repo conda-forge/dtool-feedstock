@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - dtoolcore ==3.18.0
+    - dtoolcore ==3.18.2
     - dtool_cli ==0.7.1
     - dtool_create ==0.23.4
     - dtool_info ==0.16.2
