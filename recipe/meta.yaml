@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - setuptools >=42
     - setuptools-scm >=6.3
     - pip
   run:
-    - python
+    - python >=3.6
     - dtoolcore ==3.18.3
     - dtool_cli ==0.7.1
     - dtool_create ==0.23.4
