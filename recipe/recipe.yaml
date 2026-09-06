@@ -1,0 +1,68 @@
+schema_version: 1
+
+context:
+  name: dtool
+  version: "3.27.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 6a96f57dd39cff370926d61a0da8f5fea698e3504156297689321ec09cfa950d
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=42
+    - setuptools-scm >=6.3
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - dtoolcore ==3.18.3
+    - dtool_cli ==0.7.1
+    - dtool_create ==0.23.4
+    - dtool_info ==0.16.2
+    - dtool_symlink ==0.3.1
+    - dtool_http ==0.5.1
+    - dtool_config ==0.4.1
+    - dtool_overlay ==0.3.1
+    - dtool_annotation ==0.1.1
+    - dtool_tag ==0.1.1
+
+tests:
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - dtool --help
+      - pip check
+
+about:
+  license: MIT
+  license_file: LICENSE.rst
+  summary: Dtool is a suite of software for managing scientific data and making it accessible programatically.
+  description: |
+    The dtool command line interface allows one to organise files into datasets and to move datasets between
+    different storage solutions, for example from local disk to remote object storage. Importantly it also
+    provides methods to verify that the transfer has been successful.
+
+    The Python API gives complete access to the data and metadata in a dataset. It makes it easy to create
+    scripts for processing the items, or a subset of items, in a dataset. The Python API also allows
+    datasets to be constructed programatically.
+  homepage: https://github.com/jic-dtool/dtool
+  repository: https://github.com/jic-dtool/dtool
+  documentation: https://dtool.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - pvanheus
+    - jan-janssen
+    - tjelvar-olsson
