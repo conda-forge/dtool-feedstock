@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dtool
-  version: "3.27.0"
+  version: "3.28.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,32 +10,31 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 6a96f57dd39cff370926d61a0da8f5fea698e3504156297689321ec09cfa950d
+  sha256: 84423c7a93403aac502b4fb423b4b9985f6f9ccb6224fb5e13926ee41aa621af
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=42
-    - setuptools-scm >=6.3
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >=${{ python_min }}
-    - dtoolcore ==3.18.3
-    - dtool_cli ==0.7.1
-    - dtool_create ==0.23.4
-    - dtool_info ==0.16.2
+    - dtoolcore =3.20.0
+    - dtool_cli =0.7.2
+    - dtool_create =0.23.5
+    - dtool_info =0.16.3
     - dtool_symlink ==0.3.1
-    - dtool_http ==0.5.1
-    - dtool_config ==0.4.1
-    - dtool_overlay ==0.3.1
-    - dtool_annotation ==0.1.1
-    - dtool_tag ==0.1.1
-    - setuptools <80
+    - dtool_http =0.5.3
+    - dtool_config =0.4.2
+    - dtool_overlay =0.3.2
+    - dtool_annotation =0.2.0
+    - dtool_tag =0.1.2
 
 tests:
   - requirements:
