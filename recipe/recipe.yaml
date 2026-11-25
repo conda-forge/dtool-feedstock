@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dtool
-  version: "3.27.0"
+  version: "3.28.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 6a96f57dd39cff370926d61a0da8f5fea698e3504156297689321ec09cfa950d
+  sha256: 84423c7a93403aac502b4fb423b4b9985f6f9ccb6224fb5e13926ee41aa621af
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
